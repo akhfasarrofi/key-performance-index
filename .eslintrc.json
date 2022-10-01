@@ -32,7 +32,11 @@
                 "FunctionExpression": false
             }
         }],
-        "linebreak-style": ["off", "unix"]
+        "linebreak-style": ["off", "unix"],
+        "object-curly-spacing": ["off"],
+        "max-len": ["off"],
+        "indent": ["warn", 4],
+        "new-cap": ["off"]
     }
     
 }
