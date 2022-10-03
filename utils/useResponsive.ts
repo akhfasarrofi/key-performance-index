@@ -1,22 +1,16 @@
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-type Props = {
-    query?: string;
-    key?: any;
-    start?: any;
-    end?: any;
-};
-
-export default function useResponsive({ query, key, start, end }: Props) {
+export default function useResponsive(
+    query?: string,
+    key?: any,
+    start?: any,
+    end?: any,
+) {
     const theme = useTheme();
-
     const mediaUp = useMediaQuery(theme.breakpoints.up(key));
-
     const mediaDown = useMediaQuery(theme.breakpoints.down(key));
-
     const mediaBetween = useMediaQuery(theme.breakpoints.between(start, end));
-
     const mediaOnly = useMediaQuery(theme.breakpoints.only(key));
 
     if (query === 'up') {
