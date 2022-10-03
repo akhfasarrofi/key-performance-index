@@ -35,7 +35,7 @@
         "linebreak-style": ["off", "unix"],
         "object-curly-spacing": ["off"],
         "max-len": ["off"],
-        "indent": ["warn", 4],
+        "indent": ["off"],
         "new-cap": ["off"]
     }
     
