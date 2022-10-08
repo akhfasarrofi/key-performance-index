@@ -1,11 +1,12 @@
-import type {NextPage} from 'next';
+import MainDashboard from 'components/pages/dashboard/MainDashboard';
+import Layouts from 'layouts/sidebar/Layouts';
 
-const Home: NextPage = () => {
-  return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  );
+const Home = () => {
+    return (
+        <Layouts>
+            <MainDashboard />
+        </Layouts>
+    );
 };
 
 export default Home;
