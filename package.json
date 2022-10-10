@@ -1,5 +1,5 @@
 {
-  "name": "komerce-kpi",
+  "name": "key-performance-index",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.4",
     "@faker-js/faker": "^7.5.0",
+    "@hookform/resolvers": "2.9.3",
     "@iconify/react": "^4.0.0",
     "@mui/lab": "^5.0.0-alpha.101",
     "@mui/material": "^5.10.7",
@@ -28,12 +29,14 @@
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
     "react-dom": "18.2.0",
-    "react-hook-form": "^7.36.1",
+    "react-helmet-async": "^1.3.0",
+    "react-hook-form": "7.33.1",
     "react-i18next": "^11.13.0",
     "react-redux": "^7.2.6",
-    "react-router-dom": "^6.4.1",
+    "react-router-dom": "6.3.0",
     "redux": "4.1.2",
-    "simplebar-react": "^2.4.3"
+    "simplebar-react": "^2.4.3",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.10.2",
