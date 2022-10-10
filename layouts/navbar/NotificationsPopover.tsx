@@ -14,7 +14,6 @@ import IconButton from '@mui/material/IconButton';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemButton from '@mui/material/ListItemButton';
-// import { fToNow } from 'utils/formatTime';
 import Iconify from 'components/Iconify';
 import Scrollbar from 'components/Scrollbar';
 import styled from '@mui/material/styles/styled';
