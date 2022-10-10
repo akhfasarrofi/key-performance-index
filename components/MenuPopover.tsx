@@ -25,9 +25,13 @@ const ArrowStyle = styled('span')(({ theme }) => ({
     },
 }));
 
-const MenuPopover = ({ children, sx, ...other }: MenuPopoverProps) => (
+const MenuPopover = ({
+    children,
+    sx,
+    ...other
+}: MenuPopoverProps & $ComponentType<typeof Popover>) => (
     <Popover
-        open={false} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
         PaperProps={{
             sx: {
