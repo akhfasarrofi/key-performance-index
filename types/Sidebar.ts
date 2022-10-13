@@ -1,15 +1,15 @@
 export interface SidebarItemProps {
     item: {
-        title: string;
-        path: string;
-        icon: string;
+        title?: string;
+        path?: string;
+        icon?: string;
         children?: ItemSidebar[];
     };
-    active: any;
+    active: Function;
 }
 
 export interface SidabarMenuProps {
-    sidebarConfig: ItemSidebar[];
+    sidebarConfig: Array<object>;
 }
 
 export interface ItemSidebar {

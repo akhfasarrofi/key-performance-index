@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import Iconify from 'components/Iconify';
 import { useRouter } from 'next/router';
-import { ItemSidebar, SidabarMenuProps, SidebarItemProps } from 'types/Sidebar';
+import { SidabarMenuProps, SidebarItemProps } from 'types/Sidebar';
 import { matchPath } from 'react-router-dom';
 import Link from 'next/link';
 
@@ -128,20 +128,17 @@ const SidebarItem = ({ item, active }: SidebarItemProps) => {
     );
 };
 
-const SidabarMenu = ({
-    sidebarConfig,
-    ...other
-}: SidabarMenuProps & $ComponentType<typeof Box>) => {
+const SidabarMenu = ({ sidebarConfig }: SidabarMenuProps) => {
     const { pathname } = useRouter();
 
     const match = (path: string) => (path ? !!matchPath({ path, end: false }, pathname) : false);
 
     return (
-        <Box {...other}>
+        <Box>
             <List disablePadding sx={{ p: 1 }}>
-                {sidebarConfig.map((item: ItemSidebar) => (
+                {sidebarConfig.map((item, idx: number) => (
                     <SidebarItem
-                        key={item.title}
+                        key={idx}
                         item={item}
                         active={match}
                     />
