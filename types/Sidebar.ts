@@ -4,7 +4,7 @@ export interface SidebarItemProps {
         path: string;
         icon: string;
         info: string;
-        children: Array<{
+        children?: Array<{
             title: string;
             path: string;
         }>;
