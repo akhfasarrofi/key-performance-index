@@ -35,7 +35,7 @@ const ListItemIconStyle = styled(ListItemIcon)({
 const SidebarItem = ({ item, active }: SidebarItemProps) => {
     const theme = useTheme();
     const { title, path, icon, children } = item;
-    const isActiveRoot = active(item.path);
+    const isActiveRoot = active(path);
 
     const [open, setOpen] = useState(isActiveRoot);
 
@@ -134,17 +134,15 @@ const SidabarMenu = ({ sidebarConfig }: SidabarMenuProps) => {
     const match = (path: string) => (path ? !!matchPath({ path, end: false }, pathname) : false);
 
     return (
-        <Box>
-            <List disablePadding sx={{ p: 1 }}>
-                {sidebarConfig.map((item, idx: number) => (
-                    <SidebarItem
-                        key={idx}
-                        item={item}
-                        active={match}
-                    />
-                ))}
-            </List>
-        </Box>
+        <List disablePadding sx={{ p: 1 }}>
+            {sidebarConfig.map((item, idx: number) => (
+                <SidebarItem
+                    key={idx}
+                    item={item}
+                    active={match}
+                />
+            ))}
+        </List>
     );
 };
 
