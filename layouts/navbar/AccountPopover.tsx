@@ -32,7 +32,7 @@ const ArrowStyle = styled('span')(({ theme }) => ({
 const account = {
     displayName: 'Jaydon Frankie',
     email: 'demo@minimals.cc',
-    photoURL: '/assets/avatar_default.jpg',
+    photoURL: 'https://res.cloudinary.com/den5rttgg/image/upload/v1665677191/kpi/avatar_default_wsifzx.jpg',
 };
 
 const MENU_OPTIONS = [

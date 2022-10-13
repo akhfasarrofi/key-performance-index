@@ -30,7 +30,7 @@ export default function Page404() {
 
                     <Box
                         component="img"
-                        src="/assets/illustration_404.svg"
+                        src="https://res.cloudinary.com/den5rttgg/image/upload/v1665677357/kpi/illustration_404_xuzjlb.svg"
                         sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
                     />
 

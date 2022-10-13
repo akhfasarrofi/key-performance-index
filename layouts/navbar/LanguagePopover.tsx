@@ -8,6 +8,7 @@ import styled from '@mui/material/styles/styled';
 import MenuPopover from 'components/MenuPopover';
 import langAction from 'store/lang/action';
 import { withRouter } from 'next/router';
+import Image from 'next/image';
 
 const ArrowStyle = styled('span')(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -30,12 +31,12 @@ const LANGS = [
     {
         value: 'en',
         label: 'English',
-        icon: '/assets/ic_flag_en.svg',
+        icon: 'https://res.cloudinary.com/den5rttgg/image/upload/v1665677219/kpi/ic_flag_en_pcvufq.svg',
     },
     {
         value: 'id',
         label: 'Indonesian',
-        icon: '/assets/ic_flag_id.svg',
+        icon: 'https://res.cloudinary.com/den5rttgg/image/upload/v1665677218/kpi/ic_flag_de_ayggei.svg',
     },
 ];
 
@@ -71,9 +72,19 @@ const LanguagePopover = () => {
                 }}
             >
                 {language === 'en' ? (
-                    <img src="/assets/ic_flag_en.svg" alt="Key Performance Index" />
+                    <Image
+                        src="https://res.cloudinary.com/den5rttgg/image/upload/v1665677219/kpi/ic_flag_en_pcvufq.svg"
+                        alt="Key Performance Index"
+                        width={30}
+                        height={30}
+                    />
                 ) : (
-                    <img src="/assets/ic_flag_de.svg" alt="Key Performance Index" />
+                    <Image
+                        src="https://res.cloudinary.com/den5rttgg/image/upload/v1665677218/kpi/ic_flag_de_ayggei.svg"
+                        alt="Key Performance Index"
+                        width={30}
+                        height={30}
+                    />
                 )}
             </IconButton>
 
