@@ -71,9 +71,9 @@ const LanguagePopover = () => {
                 }}
             >
                 {language === 'en' ? (
-                    <img src="/assets/ic_flag_en.svg" alt="Komerce KPI" />
+                    <img src="/assets/ic_flag_en.svg" alt="Key Performance Index" />
                 ) : (
-                    <img src="/assets/ic_flag_de.svg" alt="Komerce KPI" />
+                    <img src="/assets/ic_flag_de.svg" alt="Key Performance Index" />
                 )}
             </IconButton>
 

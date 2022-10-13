@@ -51,7 +51,7 @@ const NewsItem = ({ news }: any) => {
         <Stack direction="row" alignItems="center" spacing={2}>
             <Box
                 component="img"
-                alt={title}
+                alt="Key Performance Index"
                 src={image}
                 sx={{ width: 48, height: 48, borderRadius: 1.5, flexShrink: 0 }}
             />

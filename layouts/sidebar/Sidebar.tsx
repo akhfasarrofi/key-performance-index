@@ -65,7 +65,7 @@ const Sidebar = ({ isOpenSidebar, onCloseSidebar }: SidebarProps) => {
             <Box sx={{ mb: 5, mx: 2.5 }}>
                 <LinkMUI underline="none" component={Link} href="/">
                     <AccountStyle>
-                        <Avatar src={account.photoURL} alt="photoURL" />
+                        <Avatar src={account.photoURL} alt="Key Performance Index" />
                         <Box sx={{ ml: 2 }}>
                             <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
                                 {account.displayName}

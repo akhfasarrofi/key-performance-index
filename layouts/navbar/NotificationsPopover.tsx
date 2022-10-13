@@ -224,30 +224,30 @@ const renderContent = (notification: any) => {
 
     if (notification.type === 'order_placed') {
         return {
-            avatar: <img alt={notification.title} src="/static/icons/ic_notification_package.svg" />,
+            avatar: <img alt="Key Performance Index" src="/static/icons/ic_notification_package.svg" />,
             title,
         };
     }
     if (notification.type === 'order_shipped') {
         return {
-            avatar: <img alt={notification.title} src="/static/icons/ic_notification_shipping.svg" />,
+            avatar: <img alt="Key Performance Index" src="/static/icons/ic_notification_shipping.svg" />,
             title,
         };
     }
     if (notification.type === 'mail') {
         return {
-            avatar: <img alt={notification.title} src="/static/icons/ic_notification_mail.svg" />,
+            avatar: <img alt="Key Performance Index" src="/static/icons/ic_notification_mail.svg" />,
             title,
         };
     }
     if (notification.type === 'chat_message') {
         return {
-            avatar: <img alt={notification.title} src="/static/icons/ic_notification_chat.svg" />,
+            avatar: <img alt="Key Performance Index" src="/static/icons/ic_notification_chat.svg" />,
             title,
         };
     }
     return {
-        avatar: notification.avatar ? <img alt={notification.title} src={notification.avatar} /> : null,
+        avatar: notification.avatar ? <img alt="Key Performance Index" src={notification.avatar} /> : null,
         title,
     };
 };
