@@ -3,17 +3,17 @@ export interface SidebarItemProps {
         title: string;
         path: string;
         icon: string;
-        info: string;
-        children?: Array<{
-            title: string;
-            path: string;
-        }>;
+        children?: ItemSidebar[];
     };
     active: any;
 }
 
 export interface SidabarMenuProps {
-    sidebarConfig: Array<object>;
+    sidebarConfig: ItemSidebar[];
 }
 
-export interface ItemSidebar {}
+export interface ItemSidebar {
+    path: string;
+    icon: string;
+    title: string;
+}

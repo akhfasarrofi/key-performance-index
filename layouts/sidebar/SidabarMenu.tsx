@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import Iconify from 'components/Iconify';
 import { useRouter } from 'next/router';
-import { SidabarMenuProps, SidebarItemProps } from 'types/Sidebar';
+import { ItemSidebar, SidabarMenuProps, SidebarItemProps } from 'types/Sidebar';
 import { matchPath } from 'react-router-dom';
 import Link from 'next/link';
 
@@ -34,8 +34,8 @@ const ListItemIconStyle = styled(ListItemIcon)({
 
 const SidebarItem = ({ item, active }: SidebarItemProps) => {
     const theme = useTheme();
+    const { title, path, icon, children } = item;
     const isActiveRoot = active(item.path);
-    const { title, path, icon, info, children } = item;
 
     const [open, setOpen] = useState(isActiveRoot);
 
@@ -65,7 +65,6 @@ const SidebarItem = ({ item, active }: SidebarItemProps) => {
                 >
                     <ListItemIconStyle>{icon && icon}</ListItemIconStyle>
                     <ListItemText disableTypography primary={title} />
-                    {info && info}
                     <Iconify
                         icon={open ? 'eva:arrow-ios-downward-fill' : 'eva:arrow-ios-forward-fill'}
                         sx={{ width: 16, height: 16, ml: 1 }}
@@ -121,17 +120,18 @@ const SidebarItem = ({ item, active }: SidebarItemProps) => {
                 sx={{
                     ...(isActiveRoot && activeRootStyle),
                 }}
-
             >
                 <ListItemIconStyle>{icon && icon}</ListItemIconStyle>
                 <ListItemText disableTypography primary={title} />
-                {info && info}
             </ListItemStyle>
         </Link>
     );
 };
 
-const SidabarMenu = ({ sidebarConfig, ...other }: SidabarMenuProps & $ComponentType<typeof Box>) => {
+const SidabarMenu = ({
+    sidebarConfig,
+    ...other
+}: SidabarMenuProps & $ComponentType<typeof Box>) => {
     const { pathname } = useRouter();
 
     const match = (path: string) => (path ? !!matchPath({ path, end: false }, pathname) : false);
@@ -139,8 +139,12 @@ const SidabarMenu = ({ sidebarConfig, ...other }: SidabarMenuProps & $ComponentT
     return (
         <Box {...other}>
             <List disablePadding sx={{ p: 1 }}>
-                {sidebarConfig.map((item: any) => (
-                    <SidebarItem key={item.title} item={item} active={match} />
+                {sidebarConfig.map((item: ItemSidebar) => (
+                    <SidebarItem
+                        key={item.title}
+                        item={item}
+                        active={match}
+                    />
                 ))}
             </List>
         </Box>
