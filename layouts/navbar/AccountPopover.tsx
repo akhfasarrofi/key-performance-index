@@ -9,6 +9,8 @@ import IconButton from '@mui/material/IconButton';
 import styled from '@mui/material/styles/styled';
 import { alpha } from '@mui/material/styles';
 import MenuPopover from 'components/MenuPopover';
+import handleLogout from 'utils/logout';
+import Router from 'next/router';
 
 const ArrowStyle = styled('span')(({ theme }) => ({
     [theme.breakpoints.up('sm')]: {
@@ -37,17 +39,17 @@ const MENU_OPTIONS = [
     {
         label: 'Home',
         icon: 'eva:home-fill',
-        linkTo: '/',
+        route: '/dashboard',
     },
     {
         label: 'Profile',
         icon: 'eva:person-fill',
-        linkTo: '#',
+        route: '/profile',
     },
     {
         label: 'Settings',
         icon: 'eva:settings-2-fill',
-        linkTo: '#',
+        route: '/setting',
     },
 ];
 
@@ -64,6 +66,7 @@ const AccountPopover = () => {
         setOpen(null);
     };
 
+
     return (
         <>
             <IconButton
@@ -71,17 +74,17 @@ const AccountPopover = () => {
                 onClick={handleOpen}
                 sx={{
                     p: 0,
-                    ...(open && {
-                        '&:before': {
-                            zIndex: 1,
-                            content: '\'\'',
-                            width: '100%',
-                            height: '100%',
-                            borderRadius: '50%',
-                            position: 'absolute',
-                            bgcolor: (theme) => alpha(theme.palette.grey[900], 0.8),
-                        },
-                    }),
+                    // ...(open && {
+                    //     '&:before': {
+                    //         zIndex: 1,
+                    //         content: '\'\'',
+                    //         width: '100%',
+                    //         height: '100%',
+                    //         borderRadius: '50%',
+                    //         position: 'absolute',
+                    //         bgcolor: (theme) => alpha(theme.palette.grey[900], 0.8),
+                    //     },
+                    // }),
                 }}
             >
                 <Avatar src={account.photoURL} alt="photoURL" />
@@ -118,9 +121,7 @@ const AccountPopover = () => {
                     {MENU_OPTIONS.map((option) => (
                         <MenuItem
                             key={option.label}
-                            to={option.linkTo}
-                            component="a"
-                            onClick={handleClose}
+                            onClick={() => Router.push(option.route)}
                         >
                             {option.label}
                         </MenuItem>
@@ -129,7 +130,7 @@ const AccountPopover = () => {
 
                 <Divider sx={{ borderStyle: 'dashed' }} />
 
-                <MenuItem onClick={handleClose} sx={{ m: 1 }}>
+                <MenuItem onClick={handleLogout} sx={{ m: 1 }}>
                     Logout
                 </MenuItem>
             </MenuPopover>
