@@ -53,13 +53,13 @@ const ScrollToTop = () => {
     return null;
 };
 
-const KomerceKPI = (props: KomerceKPIProps) => {
+export default function KomerceKPI(props: KomerceKPIProps) {
     const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
     return (
         <CacheProvider value={emotionCache}>
             <Head>
-                <title>Komerce KPI</title>
+                <title>Key Performance Index</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -76,5 +76,3 @@ const KomerceKPI = (props: KomerceKPIProps) => {
         </CacheProvider>
     );
 };
-
-export default KomerceKPI;
