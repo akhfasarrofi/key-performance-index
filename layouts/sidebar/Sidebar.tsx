@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import { Link as LinkMUI } from '@mui/material';
 import useResponsive from 'hooks/useResponsive';
-import Logo from 'public/assets/Logo';
+import Logo from 'components/Logo';
 import Scrollbar from 'components/Scrollbar';
 import SidabarMenu from 'layouts/sidebar/SidabarMenu';
 import sidebarConfig from 'layouts/sidebar/SidebarConfig';
