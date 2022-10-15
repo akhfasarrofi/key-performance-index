@@ -1,7 +1,7 @@
 import Router from 'next/router';
 
 const Logout = () => {
-    Router.push('/login');
+    Router.push('/');
 };
 
 export default Logout;
