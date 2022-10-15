@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { memo, ReactNode } from 'react';
 import SimpleBarReact from 'simplebar-react';
 import styled from '@mui/material/styles/styled';
 import { alpha } from '@mui/material/styles';
@@ -58,4 +58,4 @@ const Scrollbar = ({ children, sx, ...other }: ScrollbarProps) => {
     );
 };
 
-export default Scrollbar;
+export default memo(Scrollbar);
