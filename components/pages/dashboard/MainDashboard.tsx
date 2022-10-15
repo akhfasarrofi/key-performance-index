@@ -6,26 +6,14 @@ import Iconify from 'components/Iconify';
 import {
     Widget,
     Analytic,
-    // CurrentVisits,
-    // ConversionRates,
     CurrentSubject,
-    // Timelines,
+    Timelines,
     TrafficSocmed,
-    News,
 } from 'components/pages/dashboard';
 import { useTranslation } from 'react-i18next';
 import Page from 'components/Page';
 import Image from 'next/image';
-
-const DATA_NEWS = [
-    {
-        id: 1,
-        image: '',
-        title: 'Hola',
-        description: 'Description',
-        postedAt: '2000-12-12',
-    },
-];
+import { faker } from '@faker-js/faker';
 
 const MainDashboard = () => {
     const theme = useTheme();
@@ -92,7 +80,7 @@ const MainDashboard = () => {
                         />
                     </Grid>
 
-                    <Grid item xs={12} md={6} lg={8}>
+                    <Grid item xs={12} md={6} lg={12}>
                         <Analytic
                             title={t('dashboard.performance')}
                             chartLabels={[
@@ -179,13 +167,6 @@ const MainDashboard = () => {
                         />
                     </Grid>
 
-                    <Grid item xs={12} md={6} lg={8}>
-                        <News
-                            title={t('dashboard.news')}
-                            list={DATA_NEWS}
-                        />
-                    </Grid>
-
                     <Grid item xs={12} md={6} lg={4}>
                         <CurrentSubject
                             title="Current Subject"
@@ -199,51 +180,23 @@ const MainDashboard = () => {
                         />
                     </Grid>
 
-                    {/* <Grid item xs={12} md={6} lg={4}>
-                    <Timelines
-                        title="Order Timeline"
-                        list={[...Array(5)].map((_, index) => ({
-                            id: faker.datatype.uuid(),
-                            title: [
-                                '1983, orders, $4220',
-                                '12 Invoices have been paid',
-                                'Order #37745 from September',
-                                'New order placed #XF-2356',
-                                'New order placed #XF-2346',
-                            ][index],
-                            type: `order${index + 1}`,
-                            time: faker.date.past(),
-                        }))}
-                    />
-                </Grid> */}
-
-                    {/* <Grid item xs={12} md={6} lg={4}>
-                    <TrafficSocmed
-                        title="Traffic by Site"
-                        list={[
-                            {
-                                name: 'FaceBook',
-                                value: 323234,
-                                icon: <Iconify icon={'eva:facebook-fill'} color="#1877F2" width={32} height={32} />,
-                            },
-                            {
-                                name: 'Google',
-                                value: 341212,
-                                icon: <Iconify icon={'eva:google-fill'} color="#DF3E30" width={32} height={32} />,
-                            },
-                            {
-                                name: 'Linkedin',
-                                value: 411213,
-                                icon: <Iconify icon={'eva:linkedin-fill'} color="#006097" width={32} height={32} />,
-                            },
-                            {
-                                name: 'Twitter',
-                                value: 443232,
-                                icon: <Iconify icon={'eva:twitter-fill'} color="#1C9CEA" width={32} height={32} />,
-                            },
-                        ]}
-                    />
-                </Grid> */}
+                    <Grid item xs={12} md={6} lg={4}>
+                        <Timelines
+                            title="Order Timeline"
+                            list={[...Array(5)].map((_, index) => ({
+                                id: faker.datatype.uuid(),
+                                title: [
+                                    '1983, orders, $4220',
+                                    '12 Invoices have been paid',
+                                    'Order #37745 from September',
+                                    'New order placed #XF-2356',
+                                    'New order placed #XF-2346',
+                                ][index],
+                                type: `order${index + 1}`,
+                                time: '16 Feb 2022 09:35',
+                            }))}
+                        />
+                    </Grid>
                 </Grid>
             </Container>
         </Page>
