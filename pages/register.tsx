@@ -67,7 +67,7 @@ export default function Register() {
                             Already have an account? {''}
                             <Link
                                 variant="subtitle2"
-                                onClick={() => router.push('/login')}
+                                onClick={() => router.push('/')}
                                 sx={{ cursor: 'pointer' }}
                             >
                                 Login
@@ -115,7 +115,7 @@ export default function Register() {
                                 Already have an account?{' '}
                                 <Link
                                     variant="subtitle2"
-                                    onClick={() => router.push('/login')}
+                                    onClick={() => router.push('/')}
                                     sx={{ cursor: 'pointer' }}
                                 >
                                     Login

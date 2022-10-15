@@ -37,7 +37,7 @@ export default function RegisterForm() {
         formState: { isSubmitting },
     } = methods;
 
-    const onSubmit = async () => router.push('/login');
+    const onSubmit = async () => router.push('/');
 
     return (
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
