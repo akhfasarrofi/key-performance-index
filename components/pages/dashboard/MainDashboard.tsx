@@ -15,6 +15,7 @@ import {
 } from 'components/pages/dashboard';
 import { useTranslation } from 'react-i18next';
 import Page from 'components/Page';
+import Image from 'next/image';
 
 const DATA_NEWS = [
     {
@@ -34,7 +35,13 @@ const MainDashboard = () => {
         <Page title='Dashboard'>
             <Container maxWidth="xl">
                 <Typography variant="h4" sx={{ mb: 5, display: 'flex' }}>
-                    {t('dashboard.title')} Admin Komerce <img width={40} src='/assets/hand.gif' alt='Key Performance Index' />
+                    {t('dashboard.title')} Admin Komerce
+                    <Image
+                        height={40}
+                        width={40}
+                        src='https://res.cloudinary.com/den5rttgg/image/upload/v1665677181/kpi/hand_njzlk2.gif'
+                        alt='Key Performance Index'
+                    />
                 </Typography>
 
                 <Grid container spacing={3}>
