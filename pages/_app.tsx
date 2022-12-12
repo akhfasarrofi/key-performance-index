@@ -13,6 +13,7 @@ import { I18nextProvider, initReactI18next } from 'react-i18next';
 import i18next from 'i18next';
 import enTranslations from 'locales/en';
 import idTranslations from 'locales/id';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 interface KomerceKPIProps extends AppProps {
     emotionCache?: EmotionCache;
@@ -56,6 +57,9 @@ const ScrollToTop = () => {
 export default function KomerceKPI(props: KomerceKPIProps) {
     const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
 
+    const auth0Domain: any = process.env.NEXT_PUBLIC_URL_AUTH0_DOMAIN;
+    const auth0ClientId: any = process.env.NEXT_PUBLIC_URL_AUTH0_CLIEND_ID;
+
     return (
         <CacheProvider value={emotionCache}>
             <Head>
@@ -69,7 +73,14 @@ export default function KomerceKPI(props: KomerceKPIProps) {
                 <ThemeProvider>
                     <I18nextProvider i18n={i18n}>
                         <ScrollToTop />
-                        <Component {...pageProps} />
+                        <Auth0Provider
+                            domain={auth0Domain}
+                            clientId={auth0ClientId}
+                            redirectUri="http://localhost:3000"
+                            scope="read:current_user update:current_user_metadata"
+                        >
+                            <Component {...pageProps} />
+                        </Auth0Provider>
                     </I18nextProvider>
                 </ThemeProvider>
             </Provider>

@@ -82,7 +82,7 @@ export default function Register() {
                             Manage the job more effectively with Minimal
                         </Typography>
                         <img
-                            alt="Key Performance Indexx"
+                            alt="Komercex"
                             src="https://res.cloudinary.com/den5rttgg/image/upload/v1665678768/kpi/illustration_register_oxrxhu.png"
                             width={464}
                             height={348}

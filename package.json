@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "env-cmd -f .env.development next dev",
+    "build": "env-cmd -f .env.development next build",
     "start": "next start",
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@auth0/auth0-react": "^1.12.0",
     "@emotion/cache": "^11.10.3",
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
@@ -22,6 +23,7 @@
     "apexcharts": "^3.35.5",
     "change-case": "^4.1.2",
     "date-fns": "2.28.0",
+    "env-cmd": "^10.1.0",
     "i18next": "^21.3.3",
     "lodash": "^4.17.21",
     "next": "12.3.1",

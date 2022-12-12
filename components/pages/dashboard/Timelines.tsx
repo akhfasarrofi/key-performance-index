@@ -16,36 +16,35 @@ const Timelines = ({
     subheader,
     list,
     ...other
-}: DashboardAnalytic & $ComponentType<typeof Card>) => {
-    return (
-        <Card {...other}>
-            <CardHeader title={title} subheader={subheader} />
+}: DashboardAnalytic & $ComponentType<typeof Card>) => (
+    <Card {...other}>
+        <CardHeader title={title} subheader={subheader} />
 
-            <CardContent
-                sx={{
-                    '& .MuiTimelineItem-missingOppositeContent:before': {
-                        display: 'none',
-                    },
-                }}
-            >
-                <Timeline>
-                    {list?.map((item, index) => (
-                        <OrderItem
-                            key={item.id}
-                            item={item}
-                            isLast={index === list.length - 1}
-                        />
-                    ))}
-                </Timeline>
-            </CardContent>
-        </Card>
-    );
-};
+        <CardContent
+            sx={{
+                '& .MuiTimelineItem-missingOppositeContent:before': {
+                    display: 'none',
+                },
+            }}
+        >
+            <Timeline>
+                {list?.map((item, index) => (
+                    <OrderItem
+                        key={index}
+                        item={item}
+                        isLast={index === list.length - 1}
+                    />
+                ))}
+            </Timeline>
+        </CardContent>
+    </Card>
+);
 
 export default Timelines;
 
 const OrderItem = ({ item, isLast }: any) => {
     const { type, title, time } = item;
+
     return (
         <TimelineItem>
             <TimelineSeparator>

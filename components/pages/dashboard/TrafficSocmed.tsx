@@ -25,7 +25,11 @@ const TrafficSocmed = ({
                     }}
                 >
                     {list?.map((site: any) => (
-                        <Paper key={site.name} variant="outlined" sx={{ py: 2.5, textAlign: 'center' }}>
+                        <Paper
+                            key={site.name}
+                            variant="outlined"
+                            sx={{ py: 2.5, textAlign: 'center' }}
+                        >
                             <Box sx={{ mb: 0.5 }}>{site.icon}</Box>
 
                             <Typography variant="h6">{fShortenNumber(site.value)}</Typography>

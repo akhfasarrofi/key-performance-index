@@ -1,13 +1,11 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
 import { fDateTime } from 'utils/formatTime';
-// import { fToNow } from 'utils/formatTime';
 import Iconify from 'components/Iconify';
 import Scrollbar from 'components/Scrollbar';
 import { DashboardAnalytic } from 'types/Dashboard';
@@ -20,7 +18,7 @@ const News = ({
     <Card {...other}>
         <CardHeader title={title} />
 
-        <Scrollbar sx={{ height: 345 }}>
+        <Scrollbar>
             <Stack spacing={3} sx={{ p: 3, pr: 0, height: 345, overflow: 'scroll'}}>
                 {list?.map((news: any) => (
                     <NewsItem key={news.id} news={news} />
