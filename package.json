@@ -9,7 +9,6 @@
     "lint": "eslint --ext .ts,.tsx --ignore-path .gitignore ."
   },
   "dependencies": {
-    "@auth0/auth0-react": "^1.12.0",
     "@emotion/cache": "^11.10.3",
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
@@ -21,6 +20,7 @@
     "@mui/material": "^5.10.7",
     "@types/lodash": "^4.14.186",
     "apexcharts": "^3.35.5",
+    "axios": "^1.2.1",
     "change-case": "^4.1.2",
     "date-fns": "2.28.0",
     "env-cmd": "^10.1.0",
@@ -33,6 +33,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.33.1",
     "react-i18next": "^11.13.0",
+    "react-query": "^3.39.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "6.3.0",
     "redux": "4.1.2",
