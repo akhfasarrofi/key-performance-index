@@ -10,7 +10,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import Iconify from 'components/Iconify';
 import { useRouter } from 'next/router';
-import { SidabarMenuProps, SidebarItemProps } from 'types/Sidebar';
+import { SidabarMenuProps, SidebarItemProps } from 'types/sidebar';
 import { matchPath } from 'react-router-dom';
 import Link from 'next/link';
 

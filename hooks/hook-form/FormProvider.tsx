@@ -1,5 +1,5 @@
 import { FormProvider as Form } from 'react-hook-form';
-import { FormProviderProps } from 'types/Form';
+import { FormProviderProps } from 'types/form';
 
 export default function FormProvider({
   children,

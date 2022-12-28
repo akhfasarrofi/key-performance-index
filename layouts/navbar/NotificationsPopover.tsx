@@ -19,7 +19,7 @@ import Scrollbar from 'components/Scrollbar';
 import styled from '@mui/material/styles/styled';
 import { alpha } from '@mui/material/styles';
 import MenuPopover from 'components/MenuPopover';
-import { NotificationDto } from 'types/Notification';
+import { NotificationDto } from 'types/notification';
 
 const NOTIFICATIONS = [
     {

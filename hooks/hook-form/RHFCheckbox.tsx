@@ -2,8 +2,7 @@ import { useFormContext, Controller } from 'react-hook-form';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
-import { RHFCheckboxProps, RHFMultiCheckboxProps } from 'types/Form';
-
+import { RHFCheckboxProps, RHFMultiCheckboxProps } from 'types/form';
 
 export function RHFCheckbox({ name, ...other }: RHFCheckboxProps) {
   const { control } = useFormContext();

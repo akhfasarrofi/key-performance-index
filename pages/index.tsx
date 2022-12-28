@@ -5,8 +5,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import useResponsive from 'hooks/useResponsive';
 import Logo from 'components/Logo';
-import LoginForm from 'components/auth/LoginForm';
-import AuthSocial from 'components/auth/AuthSocial';
+import LoginForm from 'features/authentication/Login';
+import AuthSocial from 'features/authentication/Socmed';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 

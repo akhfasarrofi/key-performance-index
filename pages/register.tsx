@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 import useResponsive from '../hooks/useResponsive';
 import Page from 'components/Page';
 import Logo from 'components/Logo';
-import RegisterForm from 'components/auth/RegisterForm';
-import AuthSocial from 'components/auth/AuthSocial';
+import RegisterForm from 'features/authentication/Register';
+import AuthSocial from 'features/authentication/Socmed';
 import { useRouter } from 'next/router';
 
 const RootStyle = styled('div')(({ theme }) => ({
