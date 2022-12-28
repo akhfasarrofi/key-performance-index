@@ -1,8 +1,9 @@
+import React from 'react';
 import { useFormContext, Controller } from 'react-hook-form';
 import TextField from '@mui/material/TextField';
 import { RHFTextFieldProps } from 'types/form';
 
-export default function RHFTextField({ name, ...other }: RHFTextFieldProps) {
+const RHFTextField = ({ name, ...other }: RHFTextFieldProps) => {
   const { control } = useFormContext();
 
   return (
@@ -21,4 +22,6 @@ export default function RHFTextField({ name, ...other }: RHFTextFieldProps) {
       )}
     />
   );
-}
+};
+
+export default React.memo(RHFTextField);
