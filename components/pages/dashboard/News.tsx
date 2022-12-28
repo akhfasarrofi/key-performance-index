@@ -8,7 +8,7 @@ import CardHeader from '@mui/material/CardHeader';
 import { fDateTime } from 'utils/formatTime';
 import Iconify from 'components/Iconify';
 import Scrollbar from 'components/Scrollbar';
-import { DashboardAnalytic } from 'types/Dashboard';
+import { DashboardAnalytic } from 'types/dashboard';
 
 const News = ({
     title,

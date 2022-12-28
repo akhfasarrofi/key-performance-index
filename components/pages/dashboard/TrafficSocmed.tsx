@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import { fShortenNumber } from 'utils/formatNumber';
-import { DashboardAnalytic } from 'types/Dashboard';
+import { DashboardAnalytic } from 'types/dashboard';
 
 const TrafficSocmed = ({
     title,

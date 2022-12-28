@@ -3,7 +3,7 @@ import styled from '@mui/material/styles/styled';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import BaseOptionChart from 'components/pages/dashboard/Cart';
-import { DashboardAnalytic } from 'types/Dashboard';
+import { DashboardAnalytic } from 'types/dashboard';
 import dynamic from 'next/dynamic';
 import type { ApexOptions } from 'apexcharts';
 

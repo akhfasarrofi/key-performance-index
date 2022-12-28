@@ -9,7 +9,7 @@ import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import { fDateTime } from 'utils/formatTime';
-import { DashboardAnalytic } from 'types/Dashboard';
+import { DashboardAnalytic } from 'types/dashboard';
 
 const Timelines = ({
     title,

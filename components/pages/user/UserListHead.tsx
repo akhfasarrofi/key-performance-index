@@ -4,7 +4,7 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableSortLabel from '@mui/material/TableSortLabel';
-import { UserListHeadProps } from 'types/User';
+import { UserListHeadProps } from 'types/user';
 import { MouseEventHandler } from 'react';
 
 const visuallyHidden = {

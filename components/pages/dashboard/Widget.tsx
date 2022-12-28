@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import { fShortenNumber } from 'utils/formatNumber';
 import Iconify from 'components/Iconify';
-import { DashboardWidget } from 'types/Dashboard';
+import { DashboardWidget } from 'types/dashboard';
 
 const IconWrapperStyle = styled('div')(({ theme }) => ({
     margin: 'auto',

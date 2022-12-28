@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputAdornment from '@mui/material/InputAdornment';
 import Iconify from 'components/Iconify';
-import { UserListToolbarProps } from 'types/User';
+import { UserListToolbarProps } from 'types/user';
 
 const RootStyle = styled(Toolbar)(({ theme }) => ({
   height: 96,
