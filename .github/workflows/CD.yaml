@@ -34,4 +34,4 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
         with:
           source: "./next"
-          target: "/home/dopas/projects/game-hub-react"
+          target: "/home/dopas/projects"
