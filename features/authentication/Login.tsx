@@ -1,5 +1,4 @@
-import * as Yup from 'yup';
-import { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from '@mui/material/Link';
@@ -8,44 +7,59 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import LoadingButton from '@mui/lab/LoadingButton';
 import Iconify from 'components/Iconify';
-import {
-    FormProvider,
-    RHFTextField,
-    RHFCheckbox,
-} from 'hooks/hook-form';
+import { FormProvider, RHFTextField } from 'hooks/hook-form';
+import Toast from 'components/Toast';
+import { LoginSchema, logindDfaultValues } from 'schema/login';
+import { useMutation, useQuery } from 'react-query';
+import { komtimAxiosIns } from 'helpers/headers';
+import { LOGIN } from 'helpers/url';
 import { useRouter } from 'next/router';
 
+const getMarket = async (page = 1) => {
+    const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&per_page=10&page=${page}`;
+    const response = await fetch(URL);
+    if (!response.ok) {
+        throw new Error('Fetching Error');
+    }
+    return await response.json();
+};
+
 export default function LoginForm() {
+    const [showPassword, setShowPassword] = React.useState(false);
     const router = useRouter();
+    const { data } = useQuery(['hehe', 1], () => getMarket());
+    console.log(data);
 
-    const [showPassword, setShowPassword] = useState(false);
-
-    const LoginSchema = Yup.object().shape({
-        email: Yup.string()
-            .email('Email must be a valid email address')
-            .required('Email is required'),
-        password: Yup.string().required('Password is required'),
-    });
-
-    const defaultValues = {
-        email: '',
-        password: '',
-        remember: true,
-    };
 
     const methods = useForm({
         resolver: yupResolver(LoginSchema),
-        defaultValues,
+        defaultValues: logindDfaultValues,
+        mode: 'onSubmit',
     });
 
-    const { handleSubmit, formState: { isSubmitting } } = methods;
+    const { handleSubmit } = methods;
+    const { mutate, isLoading, isSuccess } = useMutation(payload => komtimAxiosIns.post(LOGIN, payload), {
+        onSuccess: (data, variables, context) => {
+            console.log(data);
+            console.log(variables);
+            console.log(context);
+        },
+        onError: (err, variables, context) => {
+            console.log(err);
+            console.log(variables);
+            console.log(context);
+        },
+    });
 
-    const onSubmit = async () => router.push('/dashboard');
+    const onSubmit = (event?: any) => {
+        router.push('/dashboard');
+        // mutate(event)
+    };
 
     return (
         <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing={3}>
-                <RHFTextField name="email" label="Email address" />
+                <RHFTextField name="username_email" label="Email address" />
 
                 <RHFTextField
                     name="password"
@@ -80,7 +94,6 @@ export default function LoginForm() {
                 justifyContent="space-between"
                 sx={{ my: 2 }}
             >
-                <RHFCheckbox name="remember" label="Remember me" />
                 <Link variant="subtitle2" underline="hover">
                     Forgot password?
                 </Link>
@@ -91,10 +104,12 @@ export default function LoginForm() {
                 size="large"
                 type="submit"
                 variant="contained"
-                loading={isSubmitting}
+                loading={isLoading}
             >
                 Login
             </LoadingButton>
+
+            <Toast open={isSuccess} />
         </FormProvider>
     );
 }

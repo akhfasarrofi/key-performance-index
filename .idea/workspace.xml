@@ -1,19 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="62e7f6d6-b8ac-47fa-8cb8-0dfc1517e447" name="Changes" comment="">
+    <list default="true" id="62e7f6d6-b8ac-47fa-8cb8-0dfc1517e447" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/components/Toast.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/auth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/authentication/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/features/authentication/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/headers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/headers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/url.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1671635247" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="cherry" />
+                    <option name="lastUsedInstant" value="1671633628" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -28,22 +68,42 @@
     <option name="showMembers" value="true" />
     <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/zakariaakhfas/Documents/project/komerce-kpi",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "yarn",
-    "ts.external.directory.path": "/Users/zakariaakhfas/Documents/project/komerce-kpi/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zakariaakhfas/Documents/project/key-performance-index&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/zakariaakhfas/Documents/project/key-performance-index/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,7 +114,45 @@
       <updated>1663852310379</updated>
       <workItem from="1663852312907" duration="1401000" />
       <workItem from="1663853718661" duration="1388000" />
+      <workItem from="1671632765781" duration="2830000" />
+      <workItem from="1671674824851" duration="678000" />
+      <workItem from="1671697000966" duration="718000" />
+      <workItem from="1671698095333" duration="81000" />
+      <workItem from="1671698188380" duration="142000" />
+      <workItem from="1671715720567" duration="11006000" />
+      <workItem from="1671763337012" duration="7930000" />
+      <workItem from="1671806622240" duration="472000" />
+      <workItem from="1672035596543" duration="6535000" />
+      <workItem from="1672065984304" duration="7769000" />
+      <workItem from="1672110224670" duration="2756000" />
+      <workItem from="1672113142761" duration="2000" />
+      <workItem from="1672115322944" duration="8455000" />
+      <workItem from="1672152450465" duration="292000" />
+      <workItem from="1672153773614" duration="60000" />
+      <workItem from="1672277833680" duration="759000" />
+      <workItem from="1672413596113" duration="13000" />
+      <workItem from="1672413620004" duration="31000" />
+      <workItem from="1673594645197" duration="1168000" />
+      <workItem from="1673834092537" duration="38000" />
+      <workItem from="1674462518600" duration="336000" />
+      <workItem from="1674531068552" duration="45000" />
+      <workItem from="1674531121479" duration="71000" />
+      <workItem from="1674531199850" duration="306000" />
+      <workItem from="1674531517906" duration="328000" />
+      <workItem from="1674532426182" duration="3000" />
+      <workItem from="1674532433065" duration="13000" />
+      <workItem from="1674532462244" duration="92000" />
+      <workItem from="1674532562628" duration="103000" />
+      <workItem from="1674611104682" duration="13000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1671633605564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671633605564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +171,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

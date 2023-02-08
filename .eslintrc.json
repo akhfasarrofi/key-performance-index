@@ -36,7 +36,8 @@
         "object-curly-spacing": ["off"],
         "max-len": ["off"],
         "indent": ["off"],
-        "new-cap": ["off"]
+        "new-cap": ["off"],
+        "arrow-parens": "off"
     }
     
 }
